@@ -1,14 +1,10 @@
 # Final project proposal
-This file is the template for your final project proposal. Please update this file with your proposal details (delete these first two sentences, please :slightly_smiling_face:)
 
 ## Hardware/software proposal 1
-Describe one of the hardware and software proposals. The hardware and software must work together. Include a brief description of the hardware/software interface (e.g., what sort of registers will you create/use, etc.)
-
+LED that moves left and right with turn of rotary encoder. Hardware: IP for rotary encoder. Software: reads rotary encoder register and changes LED register.
 ## Hardware/software proposal 2
-Describe the other hardware and software proposal. The hardware and software must work together. Include a brief description of the hardware/software interface (e.g., what sort of registers will you create/use, etc.)
+Button (from rotary encoder) that turns on and off buzzer whose pitch is determined by rotary encoder. Hardware: Button (easy) and Buzzer IP (based off of PWM controller) Software: enables buzzer based off of button, changes pitch with change of LED from proposal 1
 
-## Extra credit
-Define any extra credit proposals here.
 
 ## Division of labor
-Briefly describe who will be working on what. For extra credit tasks and any software above the driver level, it is okay for both group members to work on a single piece, so long as the division of labor and responsibilities are clear.
+Dirk will work on the hardware IP for the rotary encoder. Seth will work on the hardware IP for the buzzer. Dirk will work on the Software for Buzzer enable. Seth will work on the software for the changing LED.
