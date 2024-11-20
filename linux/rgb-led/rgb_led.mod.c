@@ -37,4 +37,4 @@ MODULE_INFO(depends, "");
 MODULE_ALIAS("of:N*T*CHoward,rgb_led");
 MODULE_ALIAS("of:N*T*CHoward,rgb_ledC*");
 
-MODULE_INFO(srcversion, "B04D089E6DB117F962E6038");
+MODULE_INFO(srcversion, "D852929C42D98F4C6CC0D14");
