@@ -1,0 +1,99 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Owner/EELE467/EELE467_Assignments/sim/led-patterns
+Epwm_controller
+Z0 w1730492066
+Z1 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 133
+Z5 dC:/Users/Owner/EELE467/EELE467_Assignments/hdl/pwm
+Z6 8C:/Users/Owner/EELE467/EELE467_Assignments/hdl/pwm/pwm_controller.vhd
+Z7 FC:/Users/Owner/EELE467/EELE467_Assignments/hdl/pwm/pwm_controller.vhd
+l0
+L6 1
+VcR_S1hh];RK:DfAQbzOoh2
+!s100 XToB]_Y]Eh:YP7^TRCJoe1
+Z8 OV;C;2020.1;71
+32
+Z9 !s110 1730492087
+!i10b 1
+Z10 !s108 1730492087.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Owner/EELE467/EELE467_Assignments/hdl/pwm/pwm_controller.vhd|
+Z12 !s107 C:/Users/Owner/EELE467/EELE467_Assignments/hdl/pwm/pwm_controller.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Apwm_controller_arch
+R1
+R2
+R3
+R4
+DEx4 work 14 pwm_controller 0 22 cR_S1hh];RK:DfAQbzOoh2
+!i122 133
+l42
+L23 56
+Vdlgn]U2fcT9:zoHR8K0HN1
+!s100 ffBGNNh5@V3Gk5LVAjm=C0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Epwm_controller_tb
+Z15 w1730492084
+R2
+R3
+R4
+!i122 134
+R5
+Z16 8C:/Users/Owner/EELE467/EELE467_Assignments/sim/pwm/pwm_controller_tb.vhd
+Z17 FC:/Users/Owner/EELE467/EELE467_Assignments/sim/pwm/pwm_controller_tb.vhd
+l0
+L5 1
+V?6oYBGR7WYm5=B<NBT0<V3
+!s100 BCe@c]bU_Ebhnj8>fR54C2
+R8
+32
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Owner/EELE467/EELE467_Assignments/sim/pwm/pwm_controller_tb.vhd|
+Z19 !s107 C:/Users/Owner/EELE467/EELE467_Assignments/sim/pwm/pwm_controller_tb.vhd|
+!i113 1
+R13
+R14
+Apwm_controller_tb_arch
+R2
+R3
+R4
+Z20 DEx4 work 17 pwm_controller_tb 0 22 ?6oYBGR7WYm5=B<NBT0<V3
+!i122 134
+l33
+Z21 L8 59
+VWKfQdACK`Lon:eV=2SBZa3
+!s100 FiZ6U^4YcXDZ22QoPOM=F0
+R8
+32
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
