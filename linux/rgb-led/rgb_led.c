@@ -6,7 +6,7 @@
 #include <linux/miscdevice.h>               // miscdevice definitions
 #include <linux/types.h>                    // data types
 #include <linux/fs.h>                       // copy_to_user
-#include <linux/kstrtox.h>                  // kstrtou8
+#include <linux/kstrtox.h>                  // kstrtou32
 
 #define RED_DUTY_OFFSET         0x00            // 0 byte offset for the red duty cycle register
 #define GREEN_DUTY_OFFSET       0x04            // 4 byte offset for the green duty cycle register
@@ -281,7 +281,7 @@ MODULE_DEVICE_TABLE(of, rgb_led_of_match);
 static ssize_t red_duty_cycle_show(struct device *dev,
     struct device_attribute *attr, char *buf)
 {
-    u8 red_duty_cycle;
+    u32 red_duty_cycle;
 
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
@@ -304,14 +304,14 @@ static ssize_t red_duty_cycle_show(struct device *dev,
 static ssize_t red_duty_cycle_store(struct device *dev,
 struct device_attribute *attr, const char *buf, size_t size)
 {
-    u8 red_duty_cycle;
+    u32 red_duty_cycle;
 
     int ret;
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
-    // Parse the string we received as a u8
+    // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou8(buf, 0, &red_duty_cycle);
+    ret = kstrtou32(buf, 0, &red_duty_cycle);
     if (ret < 0) {
     return ret;
     }
@@ -335,7 +335,7 @@ struct device_attribute *attr, const char *buf, size_t size)
 static ssize_t green_duty_cycle_show(struct device *dev,
     struct device_attribute *attr, char *buf)
 {
-    u8 green_duty_cycle;
+    u32 green_duty_cycle;
 
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
@@ -358,14 +358,14 @@ static ssize_t green_duty_cycle_show(struct device *dev,
 static ssize_t green_duty_cycle_store(struct device *dev,
 struct device_attribute *attr, const char *buf, size_t size)
 {
-    u8 green_duty_cycle;
+    u32 green_duty_cycle;
 
     int ret;
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
-    // Parse the string we received as a u8
+    // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou8(buf, 0, &green_duty_cycle);
+    ret = kstrtou32(buf, 0, &green_duty_cycle);
     if (ret < 0) {
     return ret;
     }
@@ -389,7 +389,7 @@ struct device_attribute *attr, const char *buf, size_t size)
 static ssize_t blue_duty_cycle_show(struct device *dev,
     struct device_attribute *attr, char *buf)
 {
-    u8 blue_duty_cycle;
+    u32 blue_duty_cycle;
 
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
@@ -412,14 +412,14 @@ static ssize_t blue_duty_cycle_show(struct device *dev,
 static ssize_t blue_duty_cycle_store(struct device *dev,
 struct device_attribute *attr, const char *buf, size_t size)
 {
-    u8 blue_duty_cycle;
+    u32 blue_duty_cycle;
 
     int ret;
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
-    // Parse the string we received as a u8
+    // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou8(buf, 0, &blue_duty_cycle);
+    ret = kstrtou32(buf, 0, &blue_duty_cycle);
     if (ret < 0) {
     return ret;
     }
@@ -443,7 +443,7 @@ struct device_attribute *attr, const char *buf, size_t size)
 static ssize_t period_show(struct device *dev,
 struct device_attribute *attr, char *buf)
 {
-    u8 period;
+    u32 period;
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
     period = ioread32(priv->period);
@@ -465,15 +465,15 @@ struct device_attribute *attr, char *buf)
 static ssize_t period_store(struct device *dev,
 struct device_attribute *attr, const char *buf, size_t size)
 {
-    u8 period;
+    u32 period;
     int ret;
     struct rgb_led_dev *priv = dev_get_drvdata(dev);
 
-    // Parse the string we received as a u8
+    // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou8(buf, 0, &period);
+    ret = kstrtou32(buf, 0, &period);
     if (ret < 0) {
-        // kstrtou8 returned an error
+        // kstrtou32 returned an error
         return ret;
     }
 
