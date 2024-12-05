@@ -6,12 +6,12 @@
 #include <linux/miscdevice.h>               // miscdevice definitions
 #include <linux/types.h>                    // data types
 #include <linux/fs.h>                       // copy_to_user
-#include <linux/kstrtox.h>                  // kstrtou32
+#include <linux/kstrtox.h>                  // kstrtouint
 
-#define RED_DUTY_OFFSET         0x00            // 0 byte offset for the red duty cycle register
-#define GREEN_DUTY_OFFSET       0x04            // 4 byte offset for the green duty cycle register
-#define BLUE_DUTY_OFFSET        0x08            // 8 byte offset for the blue duty cycle register
-#define PERIOD_OFFSET           0x0C            // 12 byte offset for the period register
+#define RED_DUTY_OFFSET         0x04            // 0 byte offset for the red duty cycle register
+#define GREEN_DUTY_OFFSET       0x08            // 4 byte offset for the green duty cycle register
+#define BLUE_DUTY_OFFSET        0x0C            // 8 byte offset for the blue duty cycle register
+#define PERIOD_OFFSET           0x00            // 12 byte offset for the period register
 #define SPAN 16                                 // Span of the components memory space
 /**
 * struct rgb_led_dev - Private RGB controller device struct.
@@ -204,11 +204,11 @@ static int rgb_led_probe(struct platform_device *pdev)
     // Set the memory addresses for each register.
     priv->red_duty_cycle = priv->base_addr + RED_DUTY_OFFSET;
     priv->green_duty_cycle = priv->base_addr + GREEN_DUTY_OFFSET;
-    priv->red_duty_cycle = priv->base_addr + BLUE_DUTY_OFFSET;
+    priv->blue_duty_cycle = priv->base_addr + BLUE_DUTY_OFFSET;
     priv->period = priv->base_addr + PERIOD_OFFSET;
 
     // Set the period to 1 ms and each duty cycle to 0 to begin
-    iowrite32(1, priv->period);
+    iowrite32(0x4000000, priv->period);
     iowrite32(0x0, priv->red_duty_cycle);
     iowrite32(0x0, priv->green_duty_cycle);
     iowrite32(0x0, priv->blue_duty_cycle);
@@ -311,7 +311,7 @@ struct device_attribute *attr, const char *buf, size_t size)
 
     // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou32(buf, 0, &red_duty_cycle);
+    ret = kstrtouint(buf, 0, &red_duty_cycle);
     if (ret < 0) {
     return ret;
     }
@@ -365,7 +365,7 @@ struct device_attribute *attr, const char *buf, size_t size)
 
     // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou32(buf, 0, &green_duty_cycle);
+    ret = kstrtouint(buf, 0, &green_duty_cycle);
     if (ret < 0) {
     return ret;
     }
@@ -419,7 +419,7 @@ struct device_attribute *attr, const char *buf, size_t size)
 
     // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou32(buf, 0, &blue_duty_cycle);
+    ret = kstrtouint(buf, 0, &blue_duty_cycle);
     if (ret < 0) {
     return ret;
     }
@@ -471,9 +471,9 @@ struct device_attribute *attr, const char *buf, size_t size)
 
     // Parse the string we received as a u32
     // See https://elixir.bootlin.com/linux/latest/source/lib/kstrtox.c#L289
-    ret = kstrtou32(buf, 0, &period);
+    ret = kstrtouint(buf, 0, &period);
     if (ret < 0) {
-        // kstrtou32 returned an error
+        // kstrtouint returned an error
         return ret;
     }
 
