@@ -102,7 +102,7 @@ int main(int argc, char **argv)
     while (keepRunning)
     {
         // Read rotary encoder register
-        encoder = devmem(0xFF200000);
+        encoder = devmem(0xFF230000);
         // Set LED pattern based off of encoder value
         switch(encoder)
         {
@@ -110,32 +110,32 @@ int main(int argc, char **argv)
                 pattern = 0x80;
                 break;
             case 0x2:
-                pattern = 0x40;
+                pattern = 0xC0;
                 break;
             case 0x3:
-                pattern = 0x20;
+                pattern = 0xE0;
                 break;
             case 0x4:
-                pattern = 0x10;
+                pattern = 0xF0;
                 break;
             case 0x5:
-                pattern = 0x08;
+                pattern = 0xF8;
                 break;
             case 0x6:
-                pattern = 0x04;
+                pattern = 0xFC;
                 break;
             case 0x7:
-                pattern = 0x02;
+                pattern = 0xFE;
                 break;
             case 0x8:
-                pattern = 0x01;
+                pattern = 0xFF;
                 break;
             default:
                 pattern = 0x00;
                 break;
         }
         //Write LED pattern based off of encoder register
-            devmem(0xFF200008, pattern);
+            devmem(0xFF220000, pattern);
     }
     devmem(0xFF200008, 0x0);
     exit(0);
