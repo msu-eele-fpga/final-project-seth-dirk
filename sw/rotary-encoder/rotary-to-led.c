@@ -10,7 +10,8 @@
 #include <string.h> // for string copying
 #include <stdarg.h> // Allow optional inputs on a function
 
-// devmem function to write to registers
+// devmem function to read from rotary encoder registers and 
+// write to LED register
 int devmem(uint32_t address, ...)
 {
     // Variable argument list
@@ -102,32 +103,32 @@ int main(int argc, char **argv)
     while (keepRunning)
     {
         // Read rotary encoder register
-        encoder = devmem(0xFF200000);
+        encoder = devmem(rotary encoder register);
         // Set LED pattern based off of encoder value
         switch(encoder)
         {
-            case 0x1:
+            case 0x0:
                 pattern = 0x80;
                 break;
-            case 0x2:
+            case 0x1:
                 pattern = 0x40;
                 break;
-            case 0x3:
+            case 0x2:
                 pattern = 0x20;
                 break;
-            case 0x4:
+            case 0x3:
                 pattern = 0x10;
                 break;
-            case 0x5:
+            case 0x4:
                 pattern = 0x08;
                 break;
-            case 0x6:
+            case 0x5:
                 pattern = 0x04;
                 break;
-            case 0x7:
+            case 0x6:
                 pattern = 0x02;
                 break;
-            case 0x8:
+            case 0x7:
                 pattern = 0x01;
                 break;
             default:
