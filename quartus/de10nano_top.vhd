@@ -254,7 +254,8 @@ architecture de10nano_arch of de10nano_top is
       adc_din                         : out   std_logic;
 		export_red_out				        : out   std_ulogic;
       export_green_out                : out   std_ulogic;
-      export_blue_out		           : out   std_ulogic
+      export_blue_out		           : out   std_ulogic;
+		export_2_led						  : out std_ulogic_vector(7 downto 0)
     );
   end component soc_system;
 
@@ -356,6 +357,9 @@ begin
 		export_red_out		=> gpio_1(0),
 		export_green_out	=> gpio_1(1),
 		export_blue_out	=> gpio_1(2),
+		
+		--LED Array Signal
+		export_2_led		=> led,
 
       clk_clk       => fpga_clk1_50,
       reset_reset_n => push_button_n(1)

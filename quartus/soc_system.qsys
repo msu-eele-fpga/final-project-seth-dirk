@@ -70,6 +70,22 @@
          type = "int";
       }
    }
+   element led_array_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element led_array_0.led_array
+   {
+      datum baseAddress
+      {
+         value = "131072";
+         type = "String";
+      }
+   }
    element soc_system
    {
       datum _originalDeviceFamily
@@ -384,6 +400,11 @@
  <interface
    name="export"
    internal="RGB_LED_Control_0.export"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="export_2"
+   internal="led_array_0.export"
    type="conduit"
    dir="end" />
  <interface name="hps_i2c0" internal="hps.i2c0" />
@@ -1160,6 +1181,7 @@
   <parameter name="PLI_PORT" value="50000" />
   <parameter name="USE_PLI" value="0" />
  </module>
+ <module name="led_array_0" kind="led_array" version="1.0" enabled="1" />
  <connection
    kind="avalon"
    version="23.1"
@@ -1181,6 +1203,15 @@
  <connection
    kind="avalon"
    version="23.1"
+   start="hps.h2f_lw_axi_master"
+   end="led_array_0.led_array">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00020000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
    start="jtag_master.master"
    end="RGB_LED_Control_0.RGB_LED_Control">
   <parameter name="arbitrationPriority" value="1" />
@@ -1194,6 +1225,15 @@
    end="adc.adc_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="jtag_master.master"
+   end="led_array_0.led_array">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00020000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1206,6 +1246,11 @@
    version="23.1"
    start="fpga_clk.clk"
    end="RGB_LED_Control_0.clk" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="fpga_clk.clk"
+   end="led_array_0.clk" />
  <connection
    kind="clock"
    version="23.1"
@@ -1233,6 +1278,11 @@
    version="23.1"
    start="fpga_clk.clk_reset"
    end="RGB_LED_Control_0.rst" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="fpga_clk.clk_reset"
+   end="led_array_0.rst" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>
