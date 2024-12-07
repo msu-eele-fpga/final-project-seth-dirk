@@ -277,6 +277,20 @@ static ssize_t output_show(struct device *dev,
     return scnprintf(buf, PAGE_SIZE, "Output = %x\n", output);
 }
 
+/**
+* output_store() - while I shouldnt ever write to the output register, I can't figure out
+*		  how to get the sysfs code to work without it, and I can't be bothered with trying to put more time into this silly project
+* @dev: device structre for rotary component.
+* @attr: unused
+* @buf: buffer that contains value
+* @size: number of bytes being written
+* 
+* Return: number of bytes stored
+*/ 
+static ssize_t output_store(struct device *dev, struct device_attribute *attr, const char *buf, size_t size)
+{
+return 0;
+}
 
 /**
 * enable_show() - Return the enable value to user-space via sysfs.
@@ -300,6 +314,20 @@ static ssize_t enable_show(struct device *dev,
     return scnprintf(buf, PAGE_SIZE, "enable = %x\n", enable);
 }
 
+/*
+* enable_store() - again, this is only here to get the sysfs to compile. 
+*		  I know there should be a way better way to do this, but I just don't care
+* @dev: device structure for component
+* @attr: unused
+* @buf: buffer that contains value being written
+* @size: number of bytes
+*
+* Return: the number of bytes stored.
+*/
+static ssize_t enable_store(struct device *dev, struct device_attribute *attr, const char *buf, size_t size)
+{
+	return 0;
+}
 
 // Define sysfs attributes
 static DEVICE_ATTR_RW(output);
