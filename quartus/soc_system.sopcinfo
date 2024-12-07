@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 23.1 993 (Future versions may contain additional information.) -->
- <!-- 2024.12.05.16:29:53 -->
+ <!-- 2024.12.07.14:52:00 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1733441392</value>
+  <value>1733608319</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -21687,7 +21687,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
-    <baseAddress>4096</baseAddress>
+    <baseAddress>65536</baseAddress>
     <span>8</span>
    </memoryBlock>
   </interface>
@@ -47533,7 +47533,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
-    <baseAddress>4096</baseAddress>
+    <baseAddress>65536</baseAddress>
     <span>8</span>
    </memoryBlock>
   </interface>
@@ -48664,7 +48664,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
-    <baseAddress>4280291328</baseAddress>
+    <baseAddress>4280352768</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -49499,7 +49499,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
-    <baseAddress>4280291328</baseAddress>
+    <baseAddress>4280352768</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -77591,7 +77591,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
-    <baseAddress>4096</baseAddress>
+    <baseAddress>65536</baseAddress>
     <span>8</span>
    </memoryBlock>
   </interface>
@@ -85759,7 +85759,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x1000</value>
+   <value>0x00010000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -85912,7 +85912,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x1000</value>
+   <value>0x00010000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
