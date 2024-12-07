@@ -41,6 +41,22 @@
          type = "int";
       }
    }
+   element buzzer_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element buzzer_0.buzzer_control
+   {
+      datum baseAddress
+      {
+         value = "65536";
+         type = "String";
+      }
+   }
    element fpga_clk
    {
       datum _sortIndex
@@ -410,7 +426,11 @@
    internal="RGB_LED_Control_0.export"
    type="conduit"
    dir="end" />
+<<<<<<< HEAD
+ <interface name="export_1" internal="buzzer_0.export" type="conduit" dir="end" />
+=======
  <interface name="export2" internal="rotary_0.export" type="conduit" dir="end" />
+>>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
  <interface name="hps_i2c0" internal="hps.i2c0" />
  <interface name="hps_i2c0_clk" internal="hps.i2c0_clk" />
  <interface name="hps_i2c0_scl_in" internal="hps.i2c0_scl_in" />
@@ -635,7 +655,12 @@
   <parameter name="gui_switchover_mode">Automatic Switchover</parameter>
   <parameter name="gui_use_locked" value="false" />
  </module>
+<<<<<<< HEAD
+ <module name="buzzer_0" kind="buzzer" version="1.0" enabled="1" />
+ <module name="fpga_clk" kind="clock_source" version="23.1" enabled="1">
+=======
  <module name="fpga_clk" kind="clock_source" version="22.1" enabled="1">
+>>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
@@ -1206,16 +1231,28 @@
  </connection>
  <connection
    kind="avalon"
+<<<<<<< HEAD
+   version="23.1"
+   start="hps.h2f_lw_axi_master"
+   end="buzzer_0.buzzer_control">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+=======
    version="22.1"
    start="hps.h2f_lw_axi_master"
    end="rotary_0.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00030000" />
+>>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
    kind="avalon"
+<<<<<<< HEAD
+   version="23.1"
+=======
    version="22.1"
+>>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
    start="jtag_master.master"
    end="RGB_LED_Control_0.RGB_LED_Control">
   <parameter name="arbitrationPriority" value="1" />
@@ -1233,11 +1270,19 @@
  </connection>
  <connection
    kind="avalon"
+<<<<<<< HEAD
+   version="23.1"
+   start="jtag_master.master"
+   end="buzzer_0.buzzer_control">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+=======
    version="22.1"
    start="jtag_master.master"
    end="rotary_0.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00030000" />
+>>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1250,7 +1295,11 @@
    version="22.1"
    start="fpga_clk.clk"
    end="RGB_LED_Control_0.clk" />
+<<<<<<< HEAD
+ <connection kind="clock" version="23.1" start="fpga_clk.clk" end="buzzer_0.clk" />
+=======
  <connection kind="clock" version="22.1" start="fpga_clk.clk" end="rotary_0.clock" />
+>>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
  <connection
    kind="clock"
    version="22.1"
@@ -1283,6 +1332,11 @@
    version="22.1"
    start="fpga_clk.clk_reset"
    end="RGB_LED_Control_0.rst" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="fpga_clk.clk_reset"
+   end="buzzer_0.rst" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>
