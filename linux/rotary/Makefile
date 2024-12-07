@@ -1,12 +1,12 @@
 ifneq ($(KERNELRELEASE),)
 # kbuild part of makefile
-obj-m := rgb_led.o
+obj-m := rotary.o
 
 else
 # normal makefile
 
 # path to kernel directory
-KDIR ?= ~/linux-socfpga
+KDIR ?= /home/dirk/Documents/linux-socfpga/
 
 default:
 	$(MAKE) -C $(KDIR) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- M=$$PWD
