@@ -1,6 +1,6 @@
 ifneq ($(KERNELRELEASE),)
 # kbuild part of makefile
-obj-m := rgb_led.o
+obj-m := buzzer.o
 
 else
 # normal makefile
