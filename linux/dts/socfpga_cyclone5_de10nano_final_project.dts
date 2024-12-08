@@ -17,4 +17,8 @@
 	compatible = "adsd,de10nano_adc";
 	reg = <0xff200000 32>;
     };
+    array: array@ff220000 {
+    compatible = "Howard,array";
+    reg = <0xff220000 16>;
+    };
 };
