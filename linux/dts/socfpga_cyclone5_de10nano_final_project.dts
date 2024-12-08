@@ -5,4 +5,8 @@
         compatible = "Howard,rgb_led";
         reg = <0xff3bd060 16>;
     };
+    rotary: rotary@ff230000 {
+	compatible = "Kaiser,rotary";
+	reg = <0xff230000 16>;
+    };
 };
