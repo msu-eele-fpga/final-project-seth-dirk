@@ -51,13 +51,6 @@ int devmem(uint32_t address, ...)
     }
 }
 
-// Print usage commands for the help message
-void help()
-{
-    printf("Usage: rotary-to-led \n\n");
-    printf("-h, help      Print usage syntax.\n");;
-}
-
 // Check for CTRL-C command from user
 static volatile int keepRunning = 1;
 void programRunner(int dummy)
@@ -74,31 +67,6 @@ int main(int argc, char **argv)
     uint32_t pattern;
     int c;
 
-        // Argument parsing from the command line
-    opterr = 0;
-    while ((c = getopt (argc, argv, "h")) != -1)
-        switch (c)
-        {
-            case 'h':
-                help();
-                exit(0);
-                break;
-            case '?':
-                if (isprint (optopt))
-                {
-                    fprintf (stderr, "Unknown option `-%c'.\n", optopt);
-                    exit(0);
-                }
-                else
-                {
-                    fprintf (stderr, "Unknown option character `\\x%x'.\n", optopt);
-                    exit(0);
-                }
-                break;
-            default:
-                abort();
-        }
-
     while (keepRunning)
     {
         // Read rotary encoder register
@@ -106,28 +74,28 @@ int main(int argc, char **argv)
         // Set LED pattern based off of encoder value
         switch(encoder)
         {
-            case 0x1:
+            case 0x0:
                 pattern = 0x80;
                 break;
-            case 0x2:
+            case 0x1:
                 pattern = 0xC0;
                 break;
-            case 0x3:
+            case 0x2:
                 pattern = 0xE0;
                 break;
-            case 0x4:
+            case 0x3:
                 pattern = 0xF0;
                 break;
-            case 0x5:
+            case 0x4:
                 pattern = 0xF8;
                 break;
-            case 0x6:
+            case 0x5:
                 pattern = 0xFC;
                 break;
-            case 0x7:
+            case 0x6:
                 pattern = 0xFE;
                 break;
-            case 0x8:
+            case 0x7:
                 pattern = 0xFF;
                 break;
             default:
@@ -137,7 +105,6 @@ int main(int argc, char **argv)
         //Write LED pattern based off of encoder register
             devmem(0xFF220000, pattern);
     }
-    devmem(0xFF200008, 0x0);
     exit(0);
     return 0;
 }
