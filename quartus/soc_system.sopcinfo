@@ -2,6 +2,13 @@
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
 <<<<<<< HEAD
  <!-- Format version 23.1 993 (Future versions may contain additional information.) -->
+<<<<<<< HEAD
+ <!-- 2024.12.06.12:48:02 -->
+ <!-- A collection of modules and connections -->
+ <parameter name="AUTO_GENERATION_ID">
+  <type>java.lang.Integer</type>
+  <value>1733514481</value>
+=======
  <!-- 2024.12.07.14:52:00 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
@@ -15,6 +22,7 @@
   <type>java.lang.Integer</type>
   <value>1733528459</value>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -6017,6 +6025,11 @@ parameters are a RESULT of the module parameters. -->
    <clockDomainMember>
     <isBridge>false</isBridge>
 <<<<<<< HEAD
+    <moduleName>led_array_0</moduleName>
+    <slaveName>clk</slaveName>
+    <name>led_array_0.clk</name>
+=======
+<<<<<<< HEAD
     <moduleName>buzzer_0</moduleName>
     <slaveName>clk</slaveName>
     <name>buzzer_0.clk</name>
@@ -6025,6 +6038,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>clock</slaveName>
     <name>rotary_0.clock</name>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -21704,6 +21718,13 @@ parameters are a RESULT of the module parameters. -->
    <memoryBlock>
     <isBridge>false</isBridge>
 <<<<<<< HEAD
+    <moduleName>led_array_0</moduleName>
+    <slaveName>led_array</slaveName>
+    <name>led_array_0.led_array</name>
+    <baseAddress>131072</baseAddress>
+    <span>8</span>
+=======
+<<<<<<< HEAD
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
@@ -21716,6 +21737,7 @@ parameters are a RESULT of the module parameters. -->
     <baseAddress>196608</baseAddress>
     <span>16</span>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </memoryBlock>
   </interface>
  </module>
@@ -47558,6 +47580,13 @@ parameters are a RESULT of the module parameters. -->
    <memoryBlock>
     <isBridge>false</isBridge>
 <<<<<<< HEAD
+    <moduleName>led_array_0</moduleName>
+    <slaveName>led_array</slaveName>
+    <name>led_array_0.led_array</name>
+    <baseAddress>131072</baseAddress>
+    <span>8</span>
+=======
+<<<<<<< HEAD
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
@@ -47570,6 +47599,7 @@ parameters are a RESULT of the module parameters. -->
     <baseAddress>196608</baseAddress>
     <span>16</span>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </memoryBlock>
   </interface>
  </module>
@@ -48697,6 +48727,13 @@ parameters are a RESULT of the module parameters. -->
    <memoryBlock>
     <isBridge>false</isBridge>
 <<<<<<< HEAD
+    <moduleName>led_array_0</moduleName>
+    <slaveName>led_array</slaveName>
+    <name>led_array_0.led_array</name>
+    <baseAddress>4280418304</baseAddress>
+    <span>8</span>
+=======
+<<<<<<< HEAD
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
@@ -48709,6 +48746,7 @@ parameters are a RESULT of the module parameters. -->
     <baseAddress>4280483840</baseAddress>
     <span>16</span>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -49540,6 +49578,13 @@ parameters are a RESULT of the module parameters. -->
    <memoryBlock>
     <isBridge>false</isBridge>
 <<<<<<< HEAD
+    <moduleName>led_array_0</moduleName>
+    <slaveName>led_array</slaveName>
+    <name>led_array_0.led_array</name>
+    <baseAddress>4280418304</baseAddress>
+    <span>8</span>
+=======
+<<<<<<< HEAD
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
@@ -49552,6 +49597,7 @@ parameters are a RESULT of the module parameters. -->
     <baseAddress>4280483840</baseAddress>
     <span>16</span>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -77640,6 +77686,13 @@ parameters are a RESULT of the module parameters. -->
    <memoryBlock>
     <isBridge>false</isBridge>
 <<<<<<< HEAD
+    <moduleName>led_array_0</moduleName>
+    <slaveName>led_array</slaveName>
+    <name>led_array_0.led_array</name>
+    <baseAddress>131072</baseAddress>
+    <span>8</span>
+=======
+<<<<<<< HEAD
     <moduleName>buzzer_0</moduleName>
     <slaveName>buzzer_control</slaveName>
     <name>buzzer_0.buzzer_control</name>
@@ -77652,6 +77705,7 @@ parameters are a RESULT of the module parameters. -->
     <baseAddress>196608</baseAddress>
     <span>16</span>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </memoryBlock>
   </interface>
   <interface name="master_reset" kind="reset_source" version="22.1">
@@ -77716,7 +77770,11 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
+<<<<<<< HEAD
+ <module name="led_array_0" kind="led_array" version="1.0" path="led_array_0">
+=======
  <module name="rotary_0" kind="rotary" version="1.0" path="rotary_0">
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -77735,7 +77793,11 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+<<<<<<< HEAD
+  <interface name="led_array" kind="avalon_slave" version="23.1">
+=======
   <interface name="avalon_slave" kind="avalon_slave" version="22.1">
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -77773,7 +77835,11 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
+<<<<<<< HEAD
+    <value>8</value>
+=======
     <value>16</value>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -77797,7 +77863,11 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedClock">
     <type>java.lang.String</type>
+<<<<<<< HEAD
+    <value>clk</value>
+=======
     <value>clock</value>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -77805,7 +77875,11 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedReset">
     <type>java.lang.String</type>
+<<<<<<< HEAD
+    <value>rst</value>
+=======
     <value>reset</value>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -78070,23 +78144,51 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon</type>
    <isStart>false</isStart>
    <port>
+<<<<<<< HEAD
+    <name>avs_address</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>address</role>
+   </port>
+   <port>
+=======
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
     <name>avs_read</name>
     <direction>Input</direction>
     <width>1</width>
     <role>read</role>
    </port>
    <port>
+<<<<<<< HEAD
+=======
     <name>avs_address</name>
     <direction>Input</direction>
     <width>2</width>
     <role>address</role>
    </port>
    <port>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
     <name>avs_readdata</name>
     <direction>Output</direction>
     <width>32</width>
     <role>readdata</role>
    </port>
+<<<<<<< HEAD
+   <port>
+    <name>avs_write</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>write</role>
+   </port>
+   <port>
+    <name>avs_writedata</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>writedata</role>
+   </port>
+  </interface>
+  <interface name="clk" kind="clock_sink" version="23.1">
+=======
   </interface>
   <interface name="reset" kind="reset_sink" version="22.1">
    <!-- The connection points exposed by a module instance for the
@@ -78134,6 +78236,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
   <interface name="clock" kind="clock_sink" version="22.1">
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -78178,13 +78281,66 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
+<<<<<<< HEAD
+  <interface name="rst" kind="reset_sink" version="23.1">
+=======
   <interface name="export" kind="conduit_end" version="22.1">
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
+<<<<<<< HEAD
+    <value>clk</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>DEASSERT</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>false</isStart>
+   <port>
+    <name>rst</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>reset</role>
+   </port>
+  </interface>
+  <interface name="export" kind="conduit_end" version="23.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clk</value>
+=======
     <value>clock</value>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -78217,6 +78373,12 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
+<<<<<<< HEAD
+    <name>led</name>
+    <direction>Output</direction>
+    <width>8</width>
+    <role>led</role>
+=======
     <name>A</name>
     <direction>Input</direction>
     <width>1</width>
@@ -78233,6 +78395,7 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>1</width>
     <role>push_button</role>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    </port>
   </interface>
  </module>
@@ -86324,7 +86487,62 @@ parameters are a RESULT of the module parameters. -->
  </connection>
  <connection
 <<<<<<< HEAD
+   name="hps_bridges.h2f_lw/led_array_0.led_array"
+   kind="avalon"
+   version="23.1"
+   start="hps_bridges.h2f_lw"
+   end="led_array_0.led_array">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x00020000</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>hps_bridges</startModule>
+  <startConnectionPoint>h2f_lw</startConnectionPoint>
+  <endModule>led_array_0</endModule>
+  <endConnectionPoint>led_array</endConnectionPoint>
+ </connection>
+ <connection
+   name="jtag_master.master/RGB_LED_Control_0.RGB_LED_Control"
+=======
+<<<<<<< HEAD
    name="hps_bridges.h2f_lw/buzzer_0.buzzer_control"
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    kind="avalon"
    version="23.1"
    start="hps_bridges.h2f_lw"
@@ -86494,6 +86712,13 @@ parameters are a RESULT of the module parameters. -->
  </connection>
  <connection
 <<<<<<< HEAD
+   name="jtag_master.master/led_array_0.led_array"
+   kind="avalon"
+   version="23.1"
+   start="jtag_master.master"
+   end="led_array_0.led_array">
+=======
+<<<<<<< HEAD
    name="jtag_master.master/buzzer_0.buzzer_control"
    kind="avalon"
    version="23.1"
@@ -86506,6 +86731,7 @@ parameters are a RESULT of the module parameters. -->
    start="jtag_master.master"
    end="rotary_0.avalon_slave">
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -86517,10 +86743,14 @@ parameters are a RESULT of the module parameters. -->
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
 <<<<<<< HEAD
+   <value>0x00020000</value>
+=======
+<<<<<<< HEAD
    <value>0x00010000</value>
 =======
    <value>0x00030000</value>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -86553,12 +86783,17 @@ parameters are a RESULT of the module parameters. -->
   <startModule>jtag_master</startModule>
   <startConnectionPoint>master</startConnectionPoint>
 <<<<<<< HEAD
+  <endModule>led_array_0</endModule>
+  <endConnectionPoint>led_array</endConnectionPoint>
+=======
+<<<<<<< HEAD
   <endModule>buzzer_0</endModule>
   <endConnectionPoint>buzzer_control</endConnectionPoint>
 =======
   <endModule>rotary_0</endModule>
   <endConnectionPoint>avalon_slave</endConnectionPoint>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
  </connection>
  <connection
    name="fpga_clk.clk/jtag_master.clk"
@@ -86616,7 +86851,38 @@ parameters are a RESULT of the module parameters. -->
  </connection>
  <connection
 <<<<<<< HEAD
+   name="fpga_clk.clk/led_array_0.clk"
+   kind="clock"
+   version="23.1"
+   start="fpga_clk.clk"
+   end="led_array_0.clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>fpga_clk</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
+  <endModule>led_array_0</endModule>
+  <endConnectionPoint>clk</endConnectionPoint>
+ </connection>
+ <connection
+   name="fpga_clk.clk/hps_bridges.h2f_lw_axi_clock"
+=======
+<<<<<<< HEAD
    name="fpga_clk.clk/buzzer_0.clk"
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
    kind="clock"
    version="23.1"
    start="fpga_clk.clk"
@@ -86871,11 +87137,19 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>rst</endConnectionPoint>
  </connection>
  <connection
+<<<<<<< HEAD
+   name="fpga_clk.clk_reset/led_array_0.rst"
+   kind="reset"
+   version="23.1"
+   start="fpga_clk.clk_reset"
+   end="led_array_0.rst">
+=======
    name="fpga_clk.clk_reset/buzzer_0.rst"
    kind="reset"
    version="23.1"
    start="fpga_clk.clk_reset"
    end="buzzer_0.rst">
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -86894,7 +87168,11 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>fpga_clk</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
+<<<<<<< HEAD
+  <endModule>led_array_0</endModule>
+=======
   <endModule>buzzer_0</endModule>
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
   <endConnectionPoint>rst</endConnectionPoint>
  </connection>
  <plugin>
@@ -87331,6 +87609,16 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
 <<<<<<< HEAD
+  <instanceCount>1</instanceCount>
+  <name>led_array</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>led_array</displayName>
+  <version>1.0</version>
+ </plugin>
+ <plugin>
+=======
+<<<<<<< HEAD
 =======
   <instanceCount>1</instanceCount>
   <name>rotary</name>
@@ -87341,6 +87629,7 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
 >>>>>>> b7bbc263f3c85a27d5f06b603e14083c2ad93704
+>>>>>>> 1f2ecefa94ff7ee93069489d84b10be855e9082f
   <instanceCount>47</instanceCount>
   <name>reset</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
