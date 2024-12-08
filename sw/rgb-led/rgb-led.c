@@ -56,7 +56,7 @@ void INThandler(int sig)
 int main () {
 
 	// intial check to see if we can access both devices
-	file = fopen("/dev/de10nano_adc", "rb+");
+	file = fopen("/dev/adc", "rb+");
 	if (file == NULL) {
 		printf("failed to open adc file\n");
 		exit(1);
@@ -67,6 +67,7 @@ int main () {
 		printf("failed to open rgb file\n");
 		exit(1);
 	}
+	fclose(file);
 
 	// Test reading the registers sequentially
 	printf("\n************************************\n*");
@@ -92,20 +93,22 @@ int main () {
 	ret = fseek(file, 0, SEEK_SET);
 	printf("fseek ret = %d\n", ret);
 	printf("errno =%s\n", strerror(errno));
+
 	// close the rgb led
 	fclose(file);
 
-	file = fopen("dev/adc_de10nano", "rb+");
+	file = fopen("/dev/adc", "rb+");
+	printf("File opened");
 	// read adc now
-	ret = fread(&val, 4, 1, file2);
+	ret = fread(&val, 4, 1, file);
 	printf("adc channel 0 = 0x%x\n", val);
-	ret = fread(&val, 4, 1, file2);
+	ret = fread(&val, 4, 1, file);
 	printf("adc channel 1 = 0x%x\n", val);
-	ret = fread(&val, 4, 1, file2);
+	ret = fread(&val, 4, 1, file);
 	printf("adc channel 1 = 0x%x\n", val);
 
 	// Reset file position to 0
-	ret = fseek(file2, 0, SEEK_SET);
+	ret = fseek(file, 0, SEEK_SET);
 	printf("fseek ret = %d\n", ret);
 	printf("errno =%s\n", strerror(errno));
 	// close file when done

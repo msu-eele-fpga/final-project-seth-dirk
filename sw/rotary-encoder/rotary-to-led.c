@@ -50,28 +50,28 @@ int main () {
     // Case/switch statement to set the LED pattern from the encoder state
     switch(encoder)
     {
-        case 0x1:
+        case 0x0:
             pattern = 0x80;
             break;
-        case 0x2:
+        case 0x1:
             pattern = 0xC0;
             break;
-        case 0x3:
+        case 0x2:
             pattern = 0xE0;
             break;
-        case 0x4:
+        case 0x3:
             pattern = 0xF0;
             break;
-        case 0x5:
+        case 0x4:
             pattern = 0xF8;
             break;
-        case 0x6:
+        case 0x5:
             pattern = 0xFC;
             break;
-        case 0x7:
+        case 0x6:
             pattern = 0xFE;
             break;
-        case 0x8:
+        case 0x7:
             pattern = 0xFF;
             break;
         default:
