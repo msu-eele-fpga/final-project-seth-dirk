@@ -128,12 +128,15 @@ int main () {
 		file = fopen("/dev/adc","rb+");
 		ret = fseek(file, CH_0_OFFSET, SEEK_SET);
 		ret = fread(&red, 4, 1, file);
+		printf("red duty cycle = 0x%x\n",red);
 
 		ret = fseek(file, CH_1_OFFSET, SEEK_SET);
 		ret = fread(&green, 4, 1, file);
+		printf("green duty cycle = 0x%x\n",green);
 
 		ret = fseek(file, CH_2_OFFSET, SEEK_SET);
 		ret = fread(&blue, 4, 1, file);
+		printf("blue duty cycle = 0x%x\n\n",blue);
 		fclose(file);
 
 		// now write to rgb led registers with scaling factor
