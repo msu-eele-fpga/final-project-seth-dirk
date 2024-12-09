@@ -62,16 +62,18 @@ CONDITIONER : component async_conditioner
 		sync => pb
 		);
 
-enable : process(pb,rst)
+enable : process(clk,rst)
 	begin
 		if rst = '1' then
 			en <= '0';
-		elsif rising_edge(pb) then
-			en <= not en;
+		elsif rising_edge(clk) then
+			if pb = '1' then
+				en <= not en;
+				enable_reg(0) <= en;
+			end if;
 		end if;
 	end process;
-
-enable_reg(31) <= en;
+	
 ------------------------- Rotary Encoder ---------------------------------
 quadrature : process(A,B,rst)
 	begin
