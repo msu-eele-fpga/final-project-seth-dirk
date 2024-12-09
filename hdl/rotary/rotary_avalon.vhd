@@ -41,7 +41,7 @@ signal output_reg : std_ulogic_vector(31 downto 0) := (others => '0');
 signal enable_reg : std_ulogic_vector(31 downto 0) := (others => '0');
 
 -- counting variable for encoder state
-signal int : integer range 0 to 7 := 0;
+signal int : integer range 0 to 63 := 0;
 
 -- pushbutton signal
 signal pb : std_ulogic;
@@ -66,7 +66,7 @@ enable : process(pb,rst)
 	begin
 		if rst = '1' then
 			en <= '0';
-		elsif pb = '1' then
+		elsif rising_edge(pb) then
 			en <= not en;
 		end if;
 	end process;
