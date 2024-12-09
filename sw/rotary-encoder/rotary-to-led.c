@@ -15,7 +15,7 @@ int main () {
     uint32_t pattern;   //Hold the pattern to be written to the led array
 
     // Open the sysfs for the rotary encoder device driver
-	file = fopen("/dev/encoder" , "rb+" );
+	file = fopen("/dev/rotary" , "rb+" );
 	if (file == NULL) {
 		printf("failed to open file\n");
 		exit(1);

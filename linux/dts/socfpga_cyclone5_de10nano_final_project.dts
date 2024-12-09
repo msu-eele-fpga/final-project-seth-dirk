@@ -1,9 +1,9 @@
 #include "socfpga_cyclone5_de10nano.dtsi"
 
 /{
-    rgb_led: rgb_led@ff3bd060 {
+    rgb_led: rgb_led@ff3db060 {
         compatible = "Howard,rgb_led";
-        reg = <0xff3bd060 16>;
+        reg = <0xff3db060 16>;
     };
     rotary: rotary@ff230000 {
 	compatible = "Kaiser,rotary";
