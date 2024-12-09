@@ -371,7 +371,7 @@ begin
 		--Rotary Encoder Signals
 		export2_a				=> gpio_1(4),
 		export2_b				=> gpio_1(5),
-		export2_push_button	=> gpio_1(6),
+		export2_push_button	=> not gpio_1(6),
 		
 		clk_clk       => fpga_clk1_50,
 		reset_reset_n => push_button_n(1)
