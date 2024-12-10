@@ -40,7 +40,7 @@ void INThandler(int sig)
 
 int main () {
 
-	signal(SIGINT, INThandler); // allow for exit with ^C
+	//signal(SIGINT, INThandler); // allow for exit with ^C
     while(1)
         {
         // Open the sysfs for the rotary encoder device driver
@@ -59,25 +59,25 @@ int main () {
             pattern = 0x80;
         } 
         else if (encoder >= 8 && encoder < 16){
-            pattern - 0xC0;
+            pattern = 0xC0;
         }
         else if (encoder >= 16 && encoder < 24){
-            pattern - 0xE0;
+            pattern = 0xE0;
         }
         else if (encoder >= 24 && encoder < 32){
-            pattern - 0xF0;
+            pattern = 0xF0;
         }
         else if (encoder >= 32 && encoder < 40){
-            pattern - 0xF8;
+            pattern = 0xF8;
         }
         else if (encoder >= 40 && encoder < 48){
-            pattern - 0xFC;
+            pattern = 0xFC;
         }
         else if (encoder >= 48 && encoder < 56){
-            pattern - 0xFE;
+            pattern = 0xFE;
         }
         else if (encoder >= 56 && encoder < 64){
-            pattern - 0xFF;
+            pattern = 0xFF;
         }
 
         // Reset file position to 0
@@ -98,6 +98,7 @@ int main () {
         ret = fwrite(&pattern, 4, 1, file);
         fflush(file);
         fclose(file);
+        sleep(1);
     }
     return 0;
 }

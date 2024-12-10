@@ -84,8 +84,8 @@ int main () {
 	// Converting the frequency to the correct 32.26 (n.f) number for the period register
 	period_b = 1000/freq; // first change frequency to period in milliseconds
 	period_b = period_b << 26; // mulitply by number of fractional bits so we get correct value for register
-
-	signal(SIGINT, INThandler); // allow for exit with ^C
+	
+	//signal(SIGINT, INThandler); // allow for exit with ^C
 	while(1)
 	{
 		// the range of the volume register is 0 - 0x80000 (20.19 n.f for duty cycle which is proportional to buzzer volume)
@@ -132,6 +132,21 @@ int main () {
 			fflush(file);
 			fclose(file);
 		}
+		else 
+		{
+		
+			file = fopen("/dev/buzzer" , "rb+" );
+
+			// Turn off everything
+			///printf("Setting volume and frequency to zero....\n");
+			val = 0x00;
+			ret = fseek(file, VOLUME_OFFSET, SEEK_SET);
+			ret = fwrite(&val, 4, 1, file);
+			fflush(file);
+
+			fclose(file);
+		}
+	sleep(1);
 	}
-	return 0;
+	return(0);
 }
