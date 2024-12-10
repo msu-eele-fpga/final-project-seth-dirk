@@ -1,8 +1,24 @@
 #include "socfpga_cyclone5_de10nano.dtsi"
 
 /{
-    rgb_led: rgb_led@ff3bd060 {
+    rgb_led: rgb_led@ff3db060 {
         compatible = "Howard,rgb_led";
-        reg = <0xff3bd060 16>;
+        reg = <0xff3db060 16>;
+    };
+    rotary: rotary@ff230000 {
+	compatible = "Kaiser,rotary";
+	reg = <0xff230000 16>;
+    };
+    buzzer: buzzer@ff210000 {
+	compatible = "Howard,buzzer";
+	reg = <0xff210000 16>;
+    };
+    de10nano_adc: adc@ff200000 {
+	compatible = "adsd,de10nano_adc";
+	reg = <0xff200000 32>;
+    };
+    array: array@ff220000 {
+    compatible = "Howard,array";
+    reg = <0xff220000 16>;
     };
 };

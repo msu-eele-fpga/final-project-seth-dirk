@@ -252,9 +252,14 @@ architecture de10nano_arch of de10nano_top is
       adc_cs_n                        : out   std_logic;
       adc_dout                        : in    std_logic;
       adc_din                         : out   std_logic;
-		export_red_out				        : out   std_ulogic;
-      export_green_out                : out   std_ulogic;
-      export_blue_out		           : out   std_ulogic
+		export_blue_out                 : out   std_logic;
+      export_green_out                : out   std_logic;
+		export_red_out                  : out   std_logic;
+		export2_a                       : in    std_logic;
+		export2_b                       : in    std_logic;
+		export2_push_button             : in    std_logic;
+		export1_buzzer_out              : out   std_logic; 
+		export3_led							  : out 	 std_ulogic_vector(7 downto 0)
     );
   end component soc_system;
 
@@ -350,15 +355,26 @@ begin
       adc_sclk => adc_sck,
       adc_cs_n => adc_convst,
       adc_dout => adc_sdo,
-      adc_din  => adc_sdi,
+      adc_din  => adc_sdi,		
 		
 		--RGB_LED_Control Signals
 		export_red_out		=> gpio_1(0),
 		export_green_out	=> gpio_1(1),
 		export_blue_out	=> gpio_1(2),
+		
+		--LED Array Signal
+		export3_led	=> led,
 
-      clk_clk       => fpga_clk1_50,
-      reset_reset_n => push_button_n(1)
+		--Buzzer Output Signal
+		export1_buzzer_out => gpio_1(3),
+		
+		--Rotary Encoder Signals
+		export2_a				=> gpio_1(4),
+		export2_b				=> gpio_1(5),
+		export2_push_button	=> not gpio_1(6),
+		
+		clk_clk       => fpga_clk1_50,
+		reset_reset_n => push_button_n(1)
     );
 
 end architecture de10nano_arch;
