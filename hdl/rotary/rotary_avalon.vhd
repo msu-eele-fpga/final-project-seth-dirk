@@ -79,9 +79,9 @@ quadrature : process(A,B,rst)
 	begin
 		if rst = '1' then
 			int <= 0;
-		elsif rising_edge(A) and B = '1' then
+		elsif rising_edge(A) and B = '1' and int < 63 then
 			int <= int + 1;
-		elsif rising_edge(A) and B = '0' then
+		elsif rising_edge(A) and B = '0' and int > 0 then
 			int <= int - 1;
 		end if;
 	end process;
